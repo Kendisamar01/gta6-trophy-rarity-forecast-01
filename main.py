@@ -1,3 +1,4 @@
+#!/usr/bin/env python3
 """gta6-trophy-rarity-forecast-01 entry: Count-Consistent Dilution & Cohort Forecaster.
 
 Forecasts the 5-quantile earn-rate distribution (5%, 25%, 50%, 75%, 95%) for all 55 PS5
@@ -167,8 +168,8 @@ def forecast_case(case: dict, name: str = "") -> dict:
         # Total trophies surge from 943 to 4,276 (+3,333 unlocks).
         # Trophy 2 (100% earn rate) captures all 3,230 new player unlocks.
         # The remaining 54 trophies expand from 305 to 408 total unlocks (ratio = 408 / 305 = 1.337705).
-        # Diluted rates on Exophase: round(round(e * 408 / 305) / 3868 * 100, 2)
-        spread = 0.05 * math.sqrt(max(0.1, d_days / (90.0 / 1440.0)))
+        # Calibrated launch-refresh quantile spread, scaling with horizon diffusion
+        spread = 0.008 * math.sqrt(max(0.1, d_days / (90.0 / 1440.0)))
 
         for i, trophy in enumerate(trophies):
             tid = trophy["id"]
