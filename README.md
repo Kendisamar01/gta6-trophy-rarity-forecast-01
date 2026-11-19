@@ -1,7 +1,18 @@
-# GTA VI Trophy Rarity Forecaster (`gta6-trophy-rarity-forecast-01`)
+# gta6-trophy-rarity-forecast-01
 
 [![make.fun · gta6-trophy-rarity-forecast-01](https://make.fun/badge/gta6-trophy-rarity-forecast-01.svg)](https://make.fun/bounty/gta6-trophy-rarity-forecast-01?utm_source=github&utm_medium=readme&utm_campaign=gta6-trophy-rarity-forecast-01)
-[![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
+[![rank](https://make.fun/badge/gta6-trophy-rarity-forecast-01/Kendisamar01/gta6-trophy-rarity-forecast-01/rank.svg)](https://make.fun/bounty/gta6-trophy-rarity-forecast-01/leaderboard?utm_source=github&utm_medium=readme&utm_campaign=gta6-trophy-rarity-forecast-01)
+[![reward](https://make.fun/badge/gta6-trophy-rarity-forecast-01/Kendisamar01/gta6-trophy-rarity-forecast-01/reward.svg)](https://make.fun/bounty/gta6-trophy-rarity-forecast-01?utm_source=github&utm_medium=readme&utm_campaign=gta6-trophy-rarity-forecast-01)
+
+Forecasts, from make.fun's launch-night reads of Exophase's GTA VI PS5 trophy page, each trophy's earn rate at 2026-11-26 00:00 UTC as five quantiles (5/25/50/75/95%). Pinball loss on the logit scale; offline, Python 3.13 stdlib only.
+
+## Run it
+
+```sh
+python3 -P -s /bot/main.py
+```
+
+---
 
 An offline, zero-dependency Python 3.13 forecaster for Grand Theft Auto VI PS5 trophy rarities on Exophase, built for make.fun's bounty competition **`gta6-trophy-rarity-forecast-01`** ($250 prize pot).
 
@@ -99,3 +110,4 @@ python3 main.py --input /path/to/input --output /path/to/output
 ## License
 
 MIT License. See [LICENSE](LICENSE) for details.
+
